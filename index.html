@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Genaro | Mahasiswa Teknik Informatika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+    header {
+      background: #111;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #29abe2;
+    }
+    header h1 span {
+      font-size: 1.5rem;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background: #1a1a1a;
+      padding: 0.5rem 0;
+      transition: max-height 0.3s ease;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #29abe2;
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #29abe2;
+      margin-bottom: 1rem;
+    }
+    .hero h2 {
+      font-size: 1.5rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .hero p {
+      color: #ccc;
+    }
+    section {
+      padding: 2rem;
+    }
+    h3 {
+      color: #29abe2;
+      border-bottom: 2px solid #29abe2;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+    .skills .bar {
+      background: #222;
+      margin: 0.5rem 0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .skills .bar span {
+      display: block;
+      padding: 0.5rem;
+      color: #fff;
+      font-weight: bold;
+    }
+    .skills .fill {
+      height: 20px;
+      text-align: right;
+      padding-right: 0.5rem;
+      line-height: 20px;
+      color: #fff;
+    }
+    .galeri {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .galeri img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      border: 2px solid #29abe2;
+      transition: transform 0.3s ease;
+    }
+    .galeri img:hover {
+      transform: scale(1.05);
+    }
+    .kontak a {
+      display: block;
+      color: #29abe2;
+      margin: 0.5rem 0;
+      text-decoration: none;
+    }
+    .kontak a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive untuk HP */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+      }
+      nav.show {
+        max-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Na Ro <span>👑</span></h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <nav id="navMenu">
+    <a href="#tentang">Tentang</a>
+    <a href="#hobi">Hobi</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section class="hero">
+    <img src="https://raw.githubusercontent.com/Naro-design/img/refs/heads/main/IMG-20240920-WA0006.jpg" alt="Kambata" />
+    <h2>Hay, Saya Genaro</h2>
+    <p>Mahasiswa Teknik Informatika</p>
+  </section>
+
+  <section id="tentang">
+    <h3>Tentang Saya</h3>
+    <p>Perkenalkan nama lengkap saya <strong>Genaro Sarneli Tangggumaraa</strong> (2123029), saya berasal dari Kawangu, lahir pada 14 November 2005. Saya berkuliah di UNKRISWINA SUMBA mengambil jurusan Teknik Informatika dan saat ini sedang aktif belajar mengembangkan web.</p>
+  </section>
+
+  <section id="hobi">
+    <h3>Hobi Saya</h3>
+    <div class="skills">
+      <div class="bar"><span>Catur</span><div class="fill" style="width: 15%; background: linear-gradient(to right, #29abe2, #007bff);">15%</div></div>
+      <div class="bar"><span>Sepak Bola</span><div class="fill" style="width: 50%; background: linear-gradient(to right, #8e44ad, #9b59b6);">50%</div></div>
+      <div class="bar"><span>Nonton</span><div class="fill" style="width: 20%; background: linear-gradient(to right, #e74c3c, #e67e22);">20%</div></div>
+      <div class="bar"><span>Memancing</span><div class="fill" style="width: 15%; background: linear-gradient(to right, #f39c12, #f1c40f);">15%</div></div>
+    </div>
+  </section>
+
+  <section id="galeri">
+    <h3>Galeri Saya</h3>
+    <div class="galeri">
+      <img src="https://raw.githubusercontent.com/Naro-design/img/refs/heads/main/20250313_100928.jpg" alt="Pantai Walakiri" />
+      <img src="https://raw.githubusercontent.com/Naro-design/img/refs/heads/main/IMG-20240915-WA0010(1).jpg" alt="Aula UNKRISWINA" />
+      <img src="https://raw.githubusercontent.com/Naro-design/img/refs/heads/main/IMG-20250113-WA0012.jpg" alt="Lapangan Tarkan Karaha Fc" />
+      <img src="https://raw.githubusercontent.com/Naro-design/portofolio-genaro/refs/heads/main/IMG-20250113-WA0009.jpg" alt="Lapangan Tarkan Karaha Fc" />
+      <img src="https://raw.githubusercontent.com/Naro-design/img/refs/heads/main/IMG-20250314-WA0002.jpg" alt="UNKRISWINA SUMBA">
+      <img src="https://raw.githubusercontent.com/Naro-design/img/refs/heads/main/IMG-20250315-WA0012%20(1).jpg" alt="KM 10">
+      
+    </div>
+  </section>
+
+  <section id="kontak" class="kontak">
+    <h3>Hubungi Saya</h3>
+    <p>Jika Anda rindu dengan saya, silakan hubungi saya melalui:</p>
+    <a href="tel:+6281368804850">📞 0813-6880-4850</a>
+    <a href="https://wa.me/6281368804850" target="_blank">💬 WhatsApp: 0813-6880-4850</a>
+    <a href="mailto:genarotanggumara@gmail.com">📧 genarotanggumara@gmail.com</a>
+    <a href="https://www.facebook.com/naro.lx.3" target="_blank">📘 Facebook: Na Ro</a>
+    <a href="https://goo.gl/maps/3QJdjXtu1aYWLY1n7?g_st=aw">🏠 Kawangu, Nusa Tenggara Timur, indonesia</a> 
+  </section>
+
+  <footer>
+    &copy; 2025 Genaro Sarneli Tangggumara. Seluruh hak cipta dilindungi undang-undang.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
